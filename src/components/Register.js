@@ -14,10 +14,10 @@ import {
     Button
 
 } from 'reactstrap'
-export default function Login() {
+export default function Register() {
     useClass('page-login')
 
-    const handleLogin = () => {
+    const handlecreate = () => {
         console.log('Estou aqui ')
     }
     return (
@@ -28,8 +28,11 @@ export default function Login() {
                         <Card>
                             <CardBody>
                                 <Form>
-                                    <h1>Login</h1>
-                                    <p>Enter e-mail and password to access. New? <Link to='/register'>Sing-up</Link></p>
+                                    <h1>Register</h1>
+                                    <p>Enter e-mail,name and password to create account. Already registered? <Link to='/login'>Login</Link></p>
+                                    <InputGroup className='mb-3'>
+                                        <Input type='text' placeholder='Name' />
+                                    </InputGroup>
                                     <InputGroup className='mb-3'>
                                         <Input type='text' placeholder='E-mail' />
                                     </InputGroup>
@@ -37,13 +40,8 @@ export default function Login() {
                                         <Input type='password' placeholder='Password' />
                                     </InputGroup>
                                     <InputGroup className='mb-3'>
-                                        <Button outline color="primary" onClick={handleLogin}> GO!</Button>
+                                        <Button outline color="primary" onClick={handlecreate}>Register!</Button>
 
-                                    </InputGroup>
-                                    <InputGroup>
-                                        <Link to='forgot'>
-                                            <Button color="link">Forgot Passowrd</Button>
-                                        </Link>
                                     </InputGroup>
                                 </Form>
                             </CardBody>

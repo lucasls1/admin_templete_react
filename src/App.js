@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import NotFound from './components/NotFound'
 import Forgot from './components/forgot'
+import Register from './components/Register'
 function App() {
   return (
    <Router>
@@ -17,6 +18,9 @@ function App() {
        </Route>
        <Route exact path='/forgot'>
          <Forgot/>
+       </Route>
+       <Route exact path='/register'>
+         <Register/>
        </Route>
        <Route path="*">
          <NotFound/>
