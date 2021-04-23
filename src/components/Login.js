@@ -1,5 +1,6 @@
 import React from 'react'
 import useClass from './../hooks/add-class-body'
+import { Link } from 'react-router-dom'
 import {
 
     Container,
@@ -16,7 +17,7 @@ import {
 export default function Login() {
     useClass('page-login')
 
-    const handleLogin=()=>{
+    const handleLogin = () => {
         console.log('Estou aqui ')
     }
     return (
@@ -28,7 +29,7 @@ export default function Login() {
                             <CardBody>
                                 <Form>
                                     <h1>Login</h1>
-                                    <p>Enter e-mail and password to access</p>
+                                    <p>Enter e-mail and password to access. New? <Link>Sing-up</Link></p>
                                     <InputGroup className='mb-3'>
                                         <Input type='text' placeholder='E-mail' />
                                     </InputGroup>
@@ -36,7 +37,13 @@ export default function Login() {
                                         <Input type='password' placeholder='Password' />
                                     </InputGroup>
                                     <InputGroup className='mb-3'>
-                                    <Button color="primary" onClick={handleLogin}> GO!</Button>
+                                        <Button outline color="primary" onClick={handleLogin}> GO!</Button>
+
+                                    </InputGroup>
+                                    <InputGroup>
+                                        <Link to='forgot'>
+                                            <Button color="link">Forgot Passowrd</Button>
+                                        </Link>
                                     </InputGroup>
                                 </Form>
                             </CardBody>
