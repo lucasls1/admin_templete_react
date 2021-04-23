@@ -1,4 +1,5 @@
 import React from 'react'
+import useClass from './../hooks/add-class-body'
 import {
 
     Container,
@@ -13,6 +14,11 @@ import {
 
 } from 'reactstrap'
 export default function Login() {
+    useClass('page-login')
+
+    const handleLogin=()=>{
+        console.log('Estou aqui ')
+    }
     return (
         <div className='mt-5 flex-row align-items-center'>
             <Container>
@@ -30,7 +36,7 @@ export default function Login() {
                                         <Input type='password' placeholder='Password' />
                                     </InputGroup>
                                     <InputGroup className='mb-3'>
-                                    <Button color="primary"> GO!</Button>
+                                    <Button color="primary" onClick={handleLogin}> GO!</Button>
                                     </InputGroup>
                                 </Form>
                             </CardBody>
