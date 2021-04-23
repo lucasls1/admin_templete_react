@@ -14,7 +14,7 @@ import {
     Button
 
 } from 'reactstrap'
-export default function Register() {
+export default function Register(props) {
     useClass('page-login')
 
     const handlecreate = () => {

@@ -14,7 +14,7 @@ import {
     Button
 
 } from 'reactstrap'
-export default function Login() {
+export default function Login(props) {
     useClass('page-login')
 
     const handleLogin = () => {

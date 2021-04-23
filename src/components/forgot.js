@@ -14,7 +14,7 @@ import {
     Button
 
 } from 'reactstrap'
-export default function Forgot(){
+export default function Forgot(props){
     useClass('page-login')
 
     const handleSendEmail = () => {
