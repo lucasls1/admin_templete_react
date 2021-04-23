@@ -3,6 +3,7 @@ import './styles/app.scss';
 import {BrowserRouter as Router, Switch,Route} from 'react-router-dom'
 import Home from './components/Home'
 import Login from './components/Login'
+import NotFound from './components/NotFound'
 function App() {
   return (
    <Router>
@@ -12,6 +13,9 @@ function App() {
        </Route>
        <Route exact path='/login'>
          <Login/>
+       </Route>
+       <Route path="*">
+         <NotFound/>
        </Route>
      </Switch>
    </Router>
